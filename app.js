@@ -16,13 +16,14 @@ function displayYouTubeSearchData(data) {
   let resultElement = '';
   if (data.items) {
     data.items.forEach(function(item) {
-     resultElement += `<li><img src='${item.snippet.thumbnails.medium.url}'/></li>`
+     resultElement += `<li><a href = "https://www.youtube.com/watch?v=${item.id.videoId}"><img src='${item.snippet.thumbnails.medium.url}'/></a>`+
+                        `<a href = "https://www.youtube.com/watch?v=${item.id.videoId}"><p>${item.snippet.title}</p></a></li>`;
     });
   }
   else {
-    resultElement += '<p>No results</p>';
+    resultElement+= `<p>No Results</p>`
   }
-  
+
   $('.js-search-results ul').html(resultElement);
 }
 
