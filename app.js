@@ -6,6 +6,9 @@ function getDataFromApi(searchTerm, callback) {
     key: "AIzaSyDD8n-uCr_ls7qk7aSqEFeSH7scMdZrr1k",
     q: searchTerm,
     type: "video"
+    // nextPageToken: "",
+    // prevPageToken: ""
+
   }
   $.getJSON(YOUTUBE_BASE_URL, query, callback);
 }
@@ -14,6 +17,7 @@ function getDataFromApi(searchTerm, callback) {
 function displayYouTubeSearchData(data) {
   console.log(data);
   let resultElement = '';
+  let nextButton = ``
   if (data.items) {
     data.items.forEach(function(item) {
       
@@ -23,6 +27,7 @@ function displayYouTubeSearchData(data) {
         resultElement += `<li><a href = "#${item.id.videoId}"><img src="${item.snippet.thumbnails.medium.url}"/></a>`+
                           `<a href = "#_" class="lightbox" id="${item.id.videoId}"><iframe width="640" height="480" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe></a>`+
                            `<a href = "https://www.youtube.com/channel/${item.snippet.channelId}"><p>Channel:${item.snippet.channelTitle}</p></li>`;
+
                           
 
     });
