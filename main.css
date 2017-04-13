@@ -1,5 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding-top: 50px;
+	padding-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: #f1f1f1;
 }
 
 .lightbox {
@@ -18,16 +28,79 @@ body {
 }
 
 .lightbox iframe {
-	/** Pad the lightbox image */
-	/*max-width: 90%;
-	height:50%;*/
 	margin-top: 10%;
 }
 
 .lightbox:target {
 	/** Remove default browser outline */
 	outline: none;
-
 	/** Unhide lightbox **/
 	display: block;
+}
+
+h1 {
+	color: #666;
+}
+
+button {
+    padding: 5px;
+}
+
+.js-query {
+    padding: 5px;
+    min-width: 500px;
+}
+
+
+.js-search-form {
+	margin-bottom: 20px;
+}
+
+.thumbnail-image {
+	width:100%;
+	height: 100%;
+	padding-right: 3px;
+	padding-left:3px;
+}
+
+.js-search-results {
+	background-color: white;
+}
+
+.js-search-results li {
+	display:inline-table;
+	list-style: none;
+	width:25%;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #CCC;
+    padding: 10px;
+
+}
+
+.title {
+	font-weight: bold;
+	color: #167ac6;
+	height:50px;
+	margin-top: 0px;
+	text-align: left;
+}
+.channel {
+	font-weight: bold;
+	color: #167ac6;
+	height:50px;
+	margin-top: 30px;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.hidden {
+	display:none;
 }
